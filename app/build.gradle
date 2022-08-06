@@ -93,4 +93,7 @@ dependencies {
 
     //Timber
     implementation 'com.jakewharton.timber:timber:5.0.1'
+
+    //Swipe Refresh
+    implementation "com.google.accompanist:accompanist-swiperefresh:0.26.0-alpha"
 }

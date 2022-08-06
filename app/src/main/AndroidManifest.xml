@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.yigitsekerci.stocktrackerapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".StockTrackerApp"
         android:allowBackup="true"
@@ -15,7 +17,7 @@
         android:theme="@style/Theme.StockTrackerApp"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.stocklist.StockListActivity"
             android:exported="true"
             android:theme="@style/Theme.StockTrackerApp">
             <intent-filter>
