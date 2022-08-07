@@ -91,13 +91,13 @@ private fun LazyListScope.companyInfoComp(
     }
     item {
         CompanyInfoColumn(
-            columnName = stringResource(R.string.company_info_symbol),
+            columnName = stringResource(R.string.company_info_country),
             columnText = info.country
         )
     }
     item {
         CompanyInfoColumn(
-            columnName = stringResource(R.string.company_info_symbol),
+            columnName = stringResource(R.string.company_info_description),
             columnText = info.description
         )
     }
