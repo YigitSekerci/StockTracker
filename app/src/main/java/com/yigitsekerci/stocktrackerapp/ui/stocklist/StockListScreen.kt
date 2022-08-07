@@ -27,8 +27,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
@@ -38,6 +40,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
+import com.yigitsekerci.stocktrackerapp.R
 import com.yigitsekerci.stocktrackerapp.domain.model.CompanyList
 import com.yigitsekerci.stocktrackerapp.ui.companyinfo.CompanyInfoActivity
 
@@ -68,9 +71,10 @@ fun StockListScreen() {
 fun AppName() {
     val fontSize = 24.sp
     Text(
-        text = "Stock Tracker",
+        text = stringResource(id = R.string.app_name),
         color = MaterialTheme.colorScheme.tertiary,
-        fontSize = fontSize
+        fontSize = fontSize,
+        fontWeight = FontWeight.SemiBold
     )
 }
 
@@ -181,7 +185,8 @@ fun CompanyListInfoComp(
             Text(
                 text = companyList.symbol,
                 color = MaterialTheme.colorScheme.tertiary,
-                textDecoration = TextDecoration.Underline
+                textDecoration = TextDecoration.Underline,
+                fontStyle = FontStyle.Italic
             )
         }
         Spacer(modifier = Modifier.weight(1f))
